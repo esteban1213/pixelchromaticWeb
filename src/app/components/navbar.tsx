@@ -10,7 +10,7 @@ import Rocket from "../../../public/images/buttons/rocket.png"
 
 //COMPONENTS
 import Button from "../components/button"
-import Dimensions from "../Dimensions"
+
 
 
 
@@ -20,9 +20,7 @@ import Dimensions from "../Dimensions"
 
 export default function Menu() {
 
- 
-  console.log(location)
-  const { width, height, isMobile } = Dimensions();
+
 
 
 
