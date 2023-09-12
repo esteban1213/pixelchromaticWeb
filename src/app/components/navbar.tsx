@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "../page.module.css";
-import { Link, useLocation,  } from "react-router-dom";
+
 // IMAGES
 import Logo from "../../../public/images/logo.png"
 import LogoMain from "../../../public/images/logomain.png"
@@ -20,7 +20,7 @@ import Dimensions from "../Dimensions"
 
 export default function Menu() {
 
-  const location = useLocation().pathname
+ 
   console.log(location)
   const { width, height, isMobile } = Dimensions();
 

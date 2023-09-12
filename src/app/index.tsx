@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import useWindowDimensions from "./Dimensions";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 
 
 
@@ -33,8 +33,11 @@ import Footer from "./components/footer";
 
 
 export default function Home() {
-  const location = useLocation();
 
+ 
+
+
+  
   
 
   useEffect(() => {
@@ -61,7 +64,7 @@ export default function Home() {
           <Route path="/explore" element={<Explore/>}></Route>
           <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-      {useLocation().pathname === "/" ? <Footer /> : null}
+       <Footer />
    
       
      
