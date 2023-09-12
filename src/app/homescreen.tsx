@@ -3,13 +3,9 @@
 import Image from "next/image";
 import styles from "./page.module.css"
 
-import { useState, useEffect } from "react";
-
 // IMAGES
-import Logo from "../../public/images/logo.png";
-import Rocket from "../../public/images/buttons/rocket.png";
-import LogoGray from "../../public/images/logogray.png";
-import useWindowDimensions from "./Dimensions";
+
+
 import {easeIn, easeInOut, easeOut, motion} from "framer-motion"
 
 //COMPONENTS
@@ -21,7 +17,7 @@ import Menu from "./empty";
 export default function Home() {
 
 
-  const { width, height, isMobile } = useWindowDimensions();
+
   const fadeInSlideUpVariants = {
     hidden: { opacity: 0, y: 100 }, // Initial position and opacity
   

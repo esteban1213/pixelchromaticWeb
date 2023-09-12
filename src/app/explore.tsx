@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import Logo from "../../public/images/logo.png";
 import Rocket from "../../public/images/buttons/rocket.png";
 import LogoGray from "../../public/images/logogray.png";
-import useWindowDimensions from "./Dimensions";
+
 
 //COMPONENTS
 import Button from "./components/button";
@@ -25,14 +25,14 @@ const fadeInSlideUpVariants = {
 };
 
 export default function Explore() {
-  const { width, height, isMobile } = useWindowDimensions();
+ 
   
 
  
 
   return (
     <motion.main
-      className={isMobile ? styles.mainMobile : styles.main}
+      className={styles.main}
       initial="hidden"
       animate="visible"
       variants={fadeInSlideUpVariants}
