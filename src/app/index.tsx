@@ -40,9 +40,7 @@ export default function Home() {
   
   
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+  
   // Use this to determine if page needs mobile view
   const { width, height, isMobile } = useWindowDimensions();
 

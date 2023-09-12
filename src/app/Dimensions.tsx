@@ -1,33 +1,40 @@
-
 import { useEffect, useState } from 'react';
 
-
-type WindowDimentions = {
+type WindowDimensions = {
     width: number | undefined;
     height: number | undefined;
-    isMobile: boolean | false
+    isMobile: boolean | false;
 };
 
-const useWindowDimensions = (): WindowDimentions => {
-    const [windowDimensions, setWindowDimensions] = useState<WindowDimentions>({
-        width: undefined,
-        height: undefined,
-        isMobile: false
+const useWindowDimensions = (): WindowDimensions => {
+    const isClient = typeof document === 'object';
+
+    const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
+        width: isClient ? window.innerWidth : undefined,
+        height: isClient ? window.innerHeight : undefined,
+        isMobile: isClient ? window.innerWidth < 768 : false,
     });
+
     useEffect(() => {
+        if (!isClient) {
+            return;
+        }
+
         function handleResize(): void {
             setWindowDimensions({
                 width: window.innerWidth,
                 height: window.innerHeight,
-                isMobile:window.innerWidth < 768 ? true : false
+                isMobile: window.innerWidth < 768,
             });
-            // console.log(window.innerWidth)
-            
         }
+
         handleResize();
         window.addEventListener('resize', handleResize);
-        return (): void => window.removeEventListener('resize', handleResize);
-    }, []); // Empty array ensures that effect is only run on mount
+
+        return (): void => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isClient]);
 
     return windowDimensions;
 };
