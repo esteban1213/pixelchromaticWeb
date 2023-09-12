@@ -1,229 +1,325 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  width: 100vw;
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 32, 95) 2.8%,
+    rgb(132, 53, 142) 97.8%
+  );
   min-height: 100vh;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
+/* HEADER  */
+.header {
+  background-color: transparent;
   position: relative;
-  margin: 0;
+  height: auto;
+  padding-top: 15px;
+
+  display: flex;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  align-items: center;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+  box-sizing: border-box;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 4rem 0;
+}
+/* Add a class to the child elements where you want to add space */
+.header-item {
+  margin-right: 1rem; /* Adjust the margin as per your desired spacing */
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.mainLogoStyle {
+  width: 2rem;
+
+  height: fit-content;
+  transition: transform 0.2s ease;
+}
+.mainLogoStyle:hover {
+  transform: scale(1.3);
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
+/* END HEADER  */
 
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
+/* FOOTER  */
 
-.logo {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
 
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
+@media (min-width: 768px) {
+  .header {
+    background-color: transparent;
+    position: relative;
+    height: auto;
+    padding-top: 15px;
 
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
+    top: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-right: 10vw;
+    padding-left: 10vw;
     align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+  }
+  .footerContent {
+    flex-direction: row;
+    align-items: center;
+    width: 80vw;
+  }
+  .styleButtonContainer {
+    padding-left: 30px;
+    width: auto;
   }
 
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  .statementText {
+    font-size: 7.4em;
+    margin-top: 5px;
+    font-weight: 100;
+    color: white;
+  }
+  .home {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .thinText {
+    font-weight: 100;
+    font-size: small;
+    color: white;
+    text-align: right;
+  }
+  .contactForm {
+    align-self: center;
+    resize: none;
+    width: 90vw;
+    background-color: white;
+    height: 50vh;
+    font-size: 5rem;
+    text-align: center;
+    border-width: 0px;
+    outline: none;
+    font-weight: 100;
+    color: black;
+  }
+  .footer {
+    background-color: white;
+    width: 90rem;
+    display: flex;
+    position: fixed;
+    height: 90rem;
+    bottom: -85rem;
+    border-radius: 45rem;
+    align-self: center;
+    flex-direction: column;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.4s ease,
+      bottom 0.3s ease;
+  }
+  .footer:hover {
+    width: 95vw;
+    height: 100vh;
+    position: fixed;
+    bottom: -5vh;
+    border-radius: 30px;
+  }
+}
+.navigationLinks {
+  gap: 30px;
+  display: flex;
+  font-size: large;
+}
+.linkText {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  transition: transform 0.3s ease, font-weight 0.1s ease-in-out;
+}
+.linkTextActive {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: transform 0.3s ease, font-weight 0.1s ease-in-out;
+}
+.linkText:hover {
+  transform: scale(1.2);
+}
+.linkTextActive:hover {
+  transform: scale(1.2);
+}
+
+/* MOBILE   */
+@media (max-width: 767px) {
+  .header {
+    background-color: transparent;
+    position: relative;
+    height: auto;
+    padding-top: 15px;
+
+    display: flex;
+    top: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    align-items: center;
+  }
+  .thinText {
+    font-weight: 200;
+    font-size: small;
+    color: white;
+    text-align: right;
+  }
+  .footer {
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    height: 80vh;
+    bottom: -70vh;
+    border-radius: 45rem;
+    align-self: center;
+    flex-direction: column;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.4s ease,
+      bottom 0.3s ease;
+  }
+  .footer:hover {
+    width: 95vw;
+    height: 90vh;
+    position: fixed;
+    bottom: -5vh;
+    border-radius: 30px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    width: 95vw;
+  }
+  .styleButtonContainer {
+    align-items: left;
+    justify-content: flex-start;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  .statementText {
+    font-size: 4rem;
+    margin-top: 0px;
+    font-weight: 100;
+    color: white;
+  }
+  .home {
+    padding-left: 5vw;
+  }
+  .contactForm {
+    align-self: center;
+    resize: none;
+    width: 90vw;
+    background-color: white;
+    height: 50vh;
+    font-size: 2rem;
+    text-align: center;
+    border-width: 0px;
+    outline: none;
+    font-weight: 100;
+    box-sizing: border-box;
+    color: black;
   }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.nav {
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
+
+  width: 80%;
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
+.styleButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+  cursor: pointer;
+}
+.styleButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 99px;
+  transition: transform 0.3s ease;
+}
+.styleButton:hover {
+  transform: scale(1.3);
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+.styleButtonMinimal {
+  background-color: white;
+  box-shadow: inset 0 0 0 2px black; /* Adjust the width (2px) as needed */
+}
+.styleButtonMaterial {
+  background-color: tomato;
+  box-shadow: inset 0 0 0 2px tomato; /* Adjust the width (2px) as needed */
+}
+.styleButtonGradient {
+  border-width: 2px;
+  background-image: linear-gradient(10deg, purple, magenta);
+}
+.styleButtonShadow {
+  background-color: white;
+  box-shadow: 0 3px 5px 2px lightgray; /* Adjust the width (2px) as needed */
+}
+.styleButtonPop {
+  background-color: orangered;
+  box-shadow: 1.5px 1.5px 0px 0.6px black; /* Adjust the width (2px) as needed */
+}
+
+/* END FOOTER */
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:auto;
+  height: auto;
+  gap:20px;
+  border-radius:100px;
+  align-items: center;
+  transition: transform .17s ease;
+  background-color:black;
+  padding: 10px;
+  color: white;
+  
+}
+
+
+
+.buttonMinimal {
+  background-color: white;
+  border-color: black;
+  border-width: 1px;
+  color:black;
+  border-style: solid;
+}
+
+
+.buttonMaterial {
+  background-color: palegreen;
+}
+.buttonImage {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.buttonText {
+  color: inherit;
+  font-size: small;
+}
+
+.button:hover {
+  transform:scale(1.1);
+  cursor: pointer;
 }
