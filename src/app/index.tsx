@@ -20,7 +20,7 @@ import ContactCard from "./contactCard"
 
 //COMPONENTS
 import Navbar from "./components/navbar"
-import Footer from "./components/footer";
+
 
 
 // PROPS
@@ -55,7 +55,7 @@ export default function Home() {
           <Route path="/explore" element={<Explore/>}></Route>
           <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-       <Footer />
+   
    
       
      
