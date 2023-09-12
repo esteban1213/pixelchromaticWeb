@@ -1,4 +1,5 @@
-"use client"; // This is a client component 👈🏽
+
+
 
 import Image, { StaticImageData } from "next/image";
 import styles from "./components.module.css";
