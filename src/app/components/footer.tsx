@@ -1,24 +1,22 @@
 "use client"; // This is a client component 👈🏽
 
 import React, { FormEvent, useState } from 'react';
-import useWindowDimensions from '../Dimensions';
 import styles from '../page.module.css'; // Replace with your CSS file import
-import ButtonText from '../components/buttonText';
 
 
 
 
 
 export default function Footer() {
-  const { width, height, isMobile } = useWindowDimensions();
+
   const [fontSize, setFontSize] = useState(5); // Initial font size
   const [showSend, setShowSend] = useState(false);
   const [message, setMessage] = useState(''); // State to store the message text
 
   const resizeText = (textarea: HTMLTextAreaElement) => {
     const contentLength = textarea.value.length;
-    const maxSize = isMobile ? 5 : 10;
-    const minSize = isMobile ? 1 : 2;
+    const maxSize = 5;
+    const minSize = 2;
     contentLength > 23 ? setShowSend(true) : setShowSend(false);
 
     let newFontSize = maxSize - contentLength * 0.05;

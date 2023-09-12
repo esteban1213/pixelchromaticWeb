@@ -9,13 +9,13 @@ import { useState, useEffect } from "react";
 import Logo from "../../public/images/logo.png";
 import Rocket from "../../public/images/buttons/rocket.png";
 import LogoGray from "../../public/images/logogray.png";
-import useWindowDimensions from "./Dimensions";
+
 
 //COMPONENTS
 import Button from "./components/button";
 
 export default function Contact() {
-  const { width, height, isMobile } = useWindowDimensions();
+
   const fadeInSlideUpVariants = {
     hidden: { opacity: 0, y: 100 }, // Initial position and opacity
     visible: {
@@ -26,7 +26,7 @@ export default function Contact() {
   };
   return (
     <motion.main
-      className={isMobile ? styles.mainMobile : styles.main}
+      className={styles.main}
       initial="hidden"
       animate="visible"
       variants={fadeInSlideUpVariants}

@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import Logo from "../../public/images/logo.png";
 import Rocket from "../../public/images/buttons/rocket.png";
 import LogoGray from "../../public/images/logogray.png";
-import useWindowDimensions from "./Dimensions";
+
 
 //COMPONENTS
 import Button from "./components/button";
@@ -22,7 +22,7 @@ const fadeInSlideUpVariants = {
 };
 
 export default function About() {
-  const { width, height, isMobile } = useWindowDimensions();
+
 
   const statement =
     "At Pixelchromatic, we're all about blending eye-catching designs with unforgettable user experiences. We love taking things step by step, focusing on what you, your brand, or your customers need. Whether it's taking your online presence to the next level or creating useful tools for your life or business, we're here to bring your ideas to life. We are your go-to problem solvers. From creating systems that help you run your business smoothly to crafting a captivating online presence, or even crafting custom experiences for your personal brand, events, or home, we've got your back. Let's make your digital world awesome, together with software and design!"
@@ -32,7 +32,7 @@ export default function About() {
 
   return (
     <motion.main
-      className={isMobile ? styles.mainMobile : styles.main}
+      className={styles.main}
       initial="hidden"
       animate="visible"
       variants={fadeInSlideUpVariants}

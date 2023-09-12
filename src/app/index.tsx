@@ -2,18 +2,13 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import useWindowDimensions from "./Dimensions";
+
 import { Routes, Route, } from "react-router-dom";
 
 
 
-import { useState, useEffect } from "react";
-
-
 // IMAGES
-import Logo from "../../public/images/logo.png";
-import Rocket from "../../public/images/buttons/rocket.png";
-import LogoGray from "../../public/images/logogray.png";
+
 
 //PAGES
 
@@ -41,8 +36,6 @@ export default function Home() {
   
 
   
-  // Use this to determine if page needs mobile view
-  const { width, height, isMobile } = useWindowDimensions();
 
  
 
