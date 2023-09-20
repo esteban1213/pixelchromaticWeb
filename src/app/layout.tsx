@@ -7,9 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Pixelchromatic",
   description: "Boost Your Success",
-  
-  
-
 };
 
 export default function RootLayout({
@@ -19,7 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    
       <body className={inter.className}>{children}</body>
     </html>
   );

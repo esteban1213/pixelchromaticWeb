@@ -2,12 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: linear-gradient(
-    89.7deg,
-    rgb(0, 32, 95) 2.8%,
-    rgb(132, 53, 142) 97.8%
-  );
+  background: rgb(212,233,255);
+background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,230,239,1) 100%);
   min-height: 100vh;
+  background-repeat: no-repeat;
 }
 
 /* HEADER  */
@@ -51,17 +49,66 @@
 }
 
 /* END HEADER  */
+.mainHome {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
 
-/* FOOTER  */
+.statementText:hover {
+  transform: scale(1.05);
+  
+  
+}
+.statementText{
+  transition:transform .4s ease;
+  color:black;
 
+  font-weight:600;
+}
+
+
+.pillarsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.pillarCard {
+  background-color: white;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+ 
+  transition: transform 0.3s;
+}
+
+.pillarCard:hover {
+  
+  transform: scale(1.05); /* Adjust the scaling factor as needed */
+}
+.home {
+ 
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  
+  box-sizing: border-box;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  min-height:100vh;
+ 
+  align-self: center;
+  
+}
 
 @media (min-width: 768px) {
   .header {
     background-color: transparent;
-    position: relative;
-    height: auto;
+    
     padding-top: 15px;
-
+    
     display: flex;
     top: 0;
     width: 100vw;
@@ -70,64 +117,27 @@
     padding-left: 10vw;
     align-items: center;
   }
-  .footerContent {
-    flex-direction: row;
-    align-items: center;
-    width: 80vw;
-  }
-  .styleButtonContainer {
-    padding-left: 30px;
-    width: auto;
-  }
 
   .statementText {
-    font-size: 7.4em;
-    margin-top: 5px;
-    font-weight: 100;
-    color: white;
+    font-size: 4em;
+    width: 95%;
+    margin-top: 0px;
+    box-sizing: border-box;
+    
   }
   .home {
     padding-left: 10vw;
     padding-right: 10vw;
+    width: 80vw;
+   
+    
+    
   }
   .thinText {
     font-weight: 100;
     font-size: small;
-    color: white;
-    text-align: right;
-  }
-  .contactForm {
-    align-self: center;
-    resize: none;
-    width: 90vw;
-    background-color: white;
-    height: 50vh;
-    font-size: 5rem;
-    text-align: center;
-    border-width: 0px;
-    outline: none;
-    font-weight: 100;
     color: black;
-  }
-  .footer {
-    background-color: white;
-    width: 90rem;
-    display: flex;
-    position: fixed;
-    height: 90rem;
-    bottom: -85rem;
-    border-radius: 45rem;
-    align-self: center;
-    flex-direction: column;
-    transition: width 0.3s ease, height 0.3s ease, border-radius 0.4s ease,
-      bottom 0.3s ease;
-  }
-  .footer:hover {
-    width: 95vw;
-    height: 100vh;
-    position: fixed;
-    bottom: -5vh;
-    border-radius: 30px;
+    text-align: right;
   }
 }
 .navigationLinks {
@@ -158,168 +168,76 @@
 @media (max-width: 767px) {
   .header {
     background-color: transparent;
-    position: relative;
-    height: auto;
+    
     padding-top: 15px;
-
+    
     display: flex;
     top: 0;
     width: 100vw;
     box-sizing: border-box;
-    padding-right: 5vw;
-    padding-left: 5vw;
+    padding-right: 10vw;
+    padding-left: 10vw;
     align-items: center;
   }
   .thinText {
     font-weight: 200;
     font-size: small;
-    color: white;
+    color: black;
     text-align: right;
   }
-  .footer {
-    background-color: white;
-    width: 100vw;
-    display: flex;
-    position: fixed;
-    height: 80vh;
-    bottom: -70vh;
-    border-radius: 45rem;
-    align-self: center;
-    flex-direction: column;
-    transition: width 0.3s ease, height 0.3s ease, border-radius 0.4s ease,
-      bottom 0.3s ease;
-  }
-  .footer:hover {
-    width: 95vw;
-    height: 90vh;
-    position: fixed;
-    bottom: -5vh;
-    border-radius: 30px;
-  }
 
-  .footerContent {
-    flex-direction: column;
-    width: 95vw;
-  }
-  .styleButtonContainer {
-    align-items: left;
-    justify-content: flex-start;
-    width: 80%;
-    box-sizing: border-box;
-  }
   .statementText {
     font-size: 4rem;
     margin-top: 0px;
-    font-weight: 100;
-    color: white;
+  
+   
   }
   .home {
+    width:95vw;
+    padding-right: 5vw;
     padding-left: 5vw;
+    
+    
   }
-  .contactForm {
-    align-self: center;
-    resize: none;
-    width: 90vw;
-    background-color: white;
-    height: 50vh;
-    font-size: 2rem;
-    text-align: center;
-    border-width: 0px;
-    outline: none;
-    font-weight: 100;
-    box-sizing: border-box;
-    color: black;
-  }
+
 }
 
 .nav {
   flex-direction: row;
   display: flex;
   gap: 10px;
-
+  
   width: 80%;
 }
 
-.styleButtonContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
 
+
+
+
+
+
+/* COMPONENTS ========= */
+.buttonStyle {
+  height: 50px;
+  width: auto;
+  float: right;
+  transition: transform .2s ease;
+}
+.buttonStyle:hover {
+  transform: scale(1.2);
   cursor: pointer;
 }
-.styleButton {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 99px;
-  transition: transform 0.3s ease;
-}
-.styleButton:hover {
-  transform: scale(1.3);
-}
 
-.styleButtonMinimal {
-  background-color: white;
-  box-shadow: inset 0 0 0 2px black; /* Adjust the width (2px) as needed */
-}
-.styleButtonMaterial {
-  background-color: tomato;
-  box-shadow: inset 0 0 0 2px tomato; /* Adjust the width (2px) as needed */
-}
-.styleButtonGradient {
-  border-width: 2px;
-  background-image: linear-gradient(10deg, purple, magenta);
-}
-.styleButtonShadow {
-  background-color: white;
-  box-shadow: 0 3px 5px 2px lightgray; /* Adjust the width (2px) as needed */
-}
-.styleButtonPop {
-  background-color: orangered;
-  box-shadow: 1.5px 1.5px 0px 0.6px black; /* Adjust the width (2px) as needed */
-}
-
-/* END FOOTER */
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width:auto;
+.infoBar {
+  width: 100%;
+  box-sizing: border-box;
   height: auto;
-  gap:20px;
-  border-radius:100px;
-  align-items: center;
-  transition: transform .17s ease;
-  background-color:black;
-  padding: 10px;
-  color: white;
-  
+  transition: transform .2s ease;
+
+
 }
-
-
-
-.buttonMinimal {
-  background-color: white;
-  border-color: black;
-  border-width: 1px;
-  color:black;
-  border-style: solid;
-}
-
-
-.buttonMaterial {
-  background-color: palegreen;
-}
-.buttonImage {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-.buttonText {
-  color: inherit;
-  font-size: small;
-}
-
-.button:hover {
-  transform:scale(1.1);
+.infoBar:hover {
+  transform: scale(1.1);
   cursor: pointer;
+
 }
