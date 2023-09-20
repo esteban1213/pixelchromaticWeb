@@ -11,7 +11,7 @@ import LogoGray from "../../public/images/logogray.png";
 
 
 //COMPONENTS
-import Button from "./components/button";
+
 
 export default function Contact() {
 
