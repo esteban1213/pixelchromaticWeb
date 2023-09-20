@@ -55,6 +55,7 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 100px;
   
 }
 
@@ -91,14 +92,13 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
 }
 .home {
  
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 40px;
   
   box-sizing: border-box;
   background-color: white;
   backdrop-filter: blur(10px);
-  min-height:100vh;
- 
+  height: auto;
+ padding-bottom: 50px;
   align-self: center;
   
 }
@@ -220,8 +220,9 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
 .buttonStyle {
   height: 50px;
   width: auto;
-  float: right;
+  float: left;
   transition: transform .2s ease;
+  margin-top: 10px;
 }
 .buttonStyle:hover {
   transform: scale(1.2);
@@ -240,4 +241,20 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   transform: scale(1.1);
   cursor: pointer;
 
+}
+
+.socialButtonCont {
+  display: flex;
+  flex-direction: row;
+  gap:10px
+}
+.socialButton{
+  width: 60px;
+  height: auto;
+  transition: transform .2s ease;
+  cursor: pointer;
+
+}
+.socialButton:hover {
+  transform: scale(1.2);
 }
