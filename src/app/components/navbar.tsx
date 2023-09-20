@@ -4,12 +4,11 @@ import Image from "next/image";
 import styles from "../page.module.css";
 
 // IMAGES
-import Logo from "../../../public/images/logo.png"
+
 import LogoMain from "../../../public/images/logomain.png"
-import Rocket from "../../../public/images/buttons/rocket.png"
+
 
 //COMPONENTS
-import Button from "../components/button"
 
 
 

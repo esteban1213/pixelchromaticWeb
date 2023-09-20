@@ -5,8 +5,6 @@ import styles from "./page.module.css"
 
 // IMAGES
 
-//COMPONENTS
-import Button from "./components/button";
 
 
 
