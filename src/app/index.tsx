@@ -2,7 +2,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import { Routes, Route, } from "react-router-dom";
 
 
 
@@ -12,10 +11,7 @@ import { Routes, Route, } from "react-router-dom";
 //PAGES
 
 import HomeScreen from "./homescreen";
-import About from "./about"
-import Contact from "./contact"
-import Explore from "./explore";
-import ContactCard from "./contactCard"
+
 
 //COMPONENTS
 import Navbar from "./components/navbar"
