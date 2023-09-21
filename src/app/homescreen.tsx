@@ -1,22 +1,21 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useRouter } from "next/router";
 
 // IMAGES
 import designBubble from "../../public/images/designBubble.png";
 import functionBubble from "../../public/images/functionBubble.png";
 import intuitiveBubble from "../../public/images/intuitiveBubble.png";
-import heartBubble from "../../public/images/heartbubble.png"
-import getStartedButton from "../../public/images/getstartedbutton.png"
-import infoBar from "../../public/images/infobar.png"
-import resultsBubble from "../../public/images/resultsBubble.png"
-import handbubble from "../../public/images/handbubble.png"
-import ideabubble from "../../public/images/ideabubble.png"
-import startnowbutton from "../../public/images/startnowbutton.png"
-import facebook from "../../public/images/facebook.png"
-import instagram from "../../public/images/insta.png"
-import tiktok from "../../public/images/tiktok.png"
-
-
+import heartBubble from "../../public/images/heartbubble.png";
+import getStartedButton from "../../public/images/getstartedbutton.png";
+import infoBar from "../../public/images/infobar.png";
+import resultsBubble from "../../public/images/resultsBubble.png";
+import handbubble from "../../public/images/handbubble.png";
+import ideabubble from "../../public/images/ideabubble.png";
+import startnowbutton from "../../public/images/startnowbutton.png";
+import facebook from "../../public/images/facebook.png";
+import instagram from "../../public/images/insta.png";
+import tiktok from "../../public/images/tiktok.png";
 
 export default function Home() {
   const pillars = [
@@ -40,8 +39,6 @@ export default function Home() {
     },
   ];
 
-
-
   const process = [
     {
       title: "Getting to know you.",
@@ -63,9 +60,7 @@ export default function Home() {
     },
   ];
 
-
-  const instagramProfileURL = 'https://www.instagram.com/_pixelchromatic';
-  
+  const instagramProfileURL = "https://www.instagram.com/_pixelchromatic";
 
   return (
     <main className={styles.mainHome}>
@@ -79,7 +74,7 @@ export default function Home() {
           & <span style={{ color: "gray" }}>Intuitive</span> Solutions
         </p>
         <br />
-      
+
         <div className={styles.pillarsContainer}>
           {pillars.map((pillar, index) => (
             <div className={styles.pillarCard} key={index}>
@@ -94,19 +89,17 @@ export default function Home() {
             </div>
           ))}
         </div>
-
-       
       </div>
       <br />
       <div className={styles.home}>
         <br />
         <Image
-                style={{ width: 80, height: "auto" }}
-                src={heartBubble}
-                alt={"heart "}
-              />
+          style={{ width: 80, height: "auto" }}
+          src={heartBubble}
+          alt={"heart "}
+        />
         <h1>What we believe in!</h1>
-        <h2 style={{fontWeight:300}}>
+        <h2 style={{ fontWeight: 300 }}>
           At Pixelchromatic, we believe in the transformative power of intuitive
           technology and digital tools that drive success. We are committed to
           creating innovative, intuitive solutions, no matter the scale, that
@@ -116,13 +109,20 @@ export default function Home() {
           solutions that fit your unique goals. Reaching out to us is the
           beginning of our journey to boost your success.
         </h2>
-        <Image className={styles.buttonStyle} onClick={() => window.open(instagramProfileURL, '_blank')} src={getStartedButton} alt="getStartedButton" />
-      </div> 
+        <Image
+          className={styles.buttonStyle}
+          onClick={() => window.open(instagramProfileURL, "_blank")}
+          src={getStartedButton}
+          alt="getStartedButton"
+        />
+      </div>
       <br />
       <div className={styles.home}>
         <br />
-        
-        <p className={styles.statementText}>Simple process with powerful results</p>
+
+        <p className={styles.statementText}>
+          Simple process with powerful results
+        </p>
         <div className={styles.pillarsContainer}>
           {process.map((process, index) => (
             <div className={styles.pillarCard} key={index}>
@@ -136,23 +136,35 @@ export default function Home() {
               <p>{process.description}</p>
             </div>
           ))}
-        
-
         </div>
-        <Image className={styles.buttonStyle} onClick={() => window.open(instagramProfileURL, '_blank')} src={startnowbutton} alt="startnow" />
+        <Image
+          className={styles.buttonStyle}
+          onClick={() => window.open(instagramProfileURL, "_blank")}
+          src={startnowbutton}
+          alt="startnow"
+        />
       </div>
 
-          <br />
+      <br />
       <div className={styles.home}>
         <br />
         <h2></h2>
         <h1>More exciting website content coming soon!</h1>
         <h3>Follow us for news and updates</h3>
         <div className={styles.socialButtonCont}>
-          <Image className={styles.socialButton} onClick={() => window.open(instagramProfileURL, '_blank')} src={instagram} alt="instagram" />
-          <Image className={styles.socialButton} src={facebook} alt="facebook" />
+          <Image
+            className={styles.socialButton}
+            onClick={() => window.open(instagramProfileURL, "_blank")}
+            src={instagram}
+            alt="instagram"
+          />
+          <Image
+            className={styles.socialButton}
+            src={facebook}
+            alt="facebook"
+          />
           <Image className={styles.socialButton} src={tiktok} alt="tiktok" />
-        </div> 
+        </div>
       </div>
     </main>
   );

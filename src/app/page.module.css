@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: rgb(212,233,255);
-background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,230,239,1) 100%);
+  background: rgb(212, 233, 255);
+  background: linear-gradient(
+    170deg,
+    rgba(212, 233, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 230, 239, 1) 100%
+  );
   min-height: 100vh;
+  color: black;
   background-repeat: no-repeat;
 }
 
@@ -56,21 +62,17 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   flex-direction: column;
   justify-content: center;
   padding-bottom: 100px;
-  
 }
 
 .statementText:hover {
   transform: scale(1.05);
-  
-  
 }
-.statementText{
-  transition:transform .4s ease;
-  color:black;
+.statementText {
+  transition: transform 0.4s ease;
+  color: black;
 
-  font-weight:600;
+  font-weight: 600;
 }
-
 
 .pillarsContainer {
   display: flex;
@@ -82,33 +84,30 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   flex: 1;
   padding: 10px;
   border-radius: 10px;
- 
+  color: black;
   transition: transform 0.3s;
 }
 
 .pillarCard:hover {
-  
   transform: scale(1.05); /* Adjust the scaling factor as needed */
 }
 .home {
- 
   border-radius: 40px;
-  
+
   box-sizing: border-box;
   background-color: white;
   backdrop-filter: blur(10px);
   height: auto;
- padding-bottom: 50px;
+  padding-bottom: 50px;
   align-self: center;
-  
 }
 
 @media (min-width: 768px) {
   .header {
     background-color: transparent;
-    
+
     padding-top: 15px;
-    
+
     display: flex;
     top: 0;
     width: 100vw;
@@ -123,15 +122,11 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
     width: 95%;
     margin-top: 0px;
     box-sizing: border-box;
-    
   }
   .home {
     padding-left: 10vw;
     padding-right: 10vw;
     width: 80vw;
-   
-    
-    
   }
   .thinText {
     font-weight: 100;
@@ -168,9 +163,9 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
 @media (max-width: 767px) {
   .header {
     background-color: transparent;
-    
+
     padding-top: 15px;
-    
+
     display: flex;
     top: 0;
     width: 100vw;
@@ -189,39 +184,28 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   .statementText {
     font-size: 4rem;
     margin-top: 0px;
-  
-   
   }
   .home {
-    width:95vw;
+    width: 95vw;
     padding-right: 5vw;
     padding-left: 5vw;
-    
-    
   }
-
 }
 
 .nav {
   flex-direction: row;
   display: flex;
   gap: 10px;
-  
+
   width: 80%;
 }
-
-
-
-
-
-
 
 /* COMPONENTS ========= */
 .buttonStyle {
   height: 50px;
   width: auto;
   float: left;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
   margin-top: 10px;
 }
 .buttonStyle:hover {
@@ -233,27 +217,23 @@ background: linear-gradient(170deg, rgba(212,233,255,1) 0%, rgba(255,255,255,1) 
   width: 100%;
   box-sizing: border-box;
   height: auto;
-  transition: transform .2s ease;
-
-
+  transition: transform 0.2s ease;
 }
 .infoBar:hover {
   transform: scale(1.1);
   cursor: pointer;
-
 }
 
 .socialButtonCont {
   display: flex;
   flex-direction: row;
-  gap:10px
+  gap: 10px;
 }
-.socialButton{
+.socialButton {
   width: 60px;
   height: auto;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
   cursor: pointer;
-
 }
 .socialButton:hover {
   transform: scale(1.2);
