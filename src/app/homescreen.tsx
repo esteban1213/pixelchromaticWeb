@@ -99,7 +99,7 @@ export default function Home() {
           alt={"heart "}
         />
         <h1>What we believe in!</h1>
-        <h2 style={{ fontWeight: 300 }}>
+        <h3 style={{ fontWeight: 300 }}>
           At Pixelchromatic, we believe in the transformative power of intuitive
           technology and digital tools that drive success. We are committed to
           creating innovative, intuitive solutions, no matter the scale, that
@@ -108,7 +108,7 @@ export default function Home() {
           landscape to foster growth, inspire creativity, and create custom
           solutions that fit your unique goals. Reaching out to us is the
           beginning of our journey to boost your success.
-        </h2>
+        </h3>
         <Image
           className={styles.buttonStyle}
           onClick={() => window.open(instagramProfileURL, "_blank")}

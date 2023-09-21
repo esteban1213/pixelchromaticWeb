@@ -74,29 +74,67 @@
   font-weight: 600;
 }
 
+/* Default styling for screens larger than 767px */
 .pillarsContainer {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
+
 .pillarCard {
   background-color: white;
-  flex: 1;
+  flex: 0.5;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  transition: transform 0.3s;
+}
+/* Default styling for screens larger than 767px */
+.pillarsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pillarCard {
+  background-color: white;
+  flex: 0.5;
   padding: 10px;
   border-radius: 10px;
   color: black;
   transition: transform 0.3s;
 }
 
-.pillarCard:hover {
-  transform: scale(1.05); /* Adjust the scaling factor as needed */
+/* Apply mobile-specific styles for screens up to 767px */
+@media (max-width: 767px) {
+  .pillarsContainer {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping to each card */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    width: 100%; /* Ensure the container takes the full width */
+  }
+
+  .pillarCard {
+    padding: 10px;
+    min-width: 80%;
+    border-radius: 10px;
+
+    color: black;
+  }
+
+  /* Hide the scrollbar */
+  .pillarsContainer::-webkit-scrollbar {
+    display: contents;
+  }
 }
+
 .home {
   border-radius: 40px;
-
   box-sizing: border-box;
   background-color: white;
-  backdrop-filter: blur(10px);
+
   height: auto;
   padding-bottom: 50px;
   align-self: center;
@@ -105,9 +143,7 @@
 @media (min-width: 768px) {
   .header {
     background-color: transparent;
-
     padding-top: 15px;
-
     display: flex;
     top: 0;
     width: 100vw;
@@ -127,6 +163,7 @@
     padding-left: 10vw;
     padding-right: 10vw;
     width: 80vw;
+    box-sizing: border-box;
   }
   .thinText {
     font-weight: 100;
@@ -186,7 +223,8 @@
     margin-top: 0px;
   }
   .home {
-    width: 95vw;
+    width: 100vw;
+    box-sizing: border-box;
     padding-right: 5vw;
     padding-left: 5vw;
   }
