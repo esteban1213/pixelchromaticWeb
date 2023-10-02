@@ -2,277 +2,72 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: rgb(212, 233, 255);
-  background: linear-gradient(
-    170deg,
-    rgba(212, 233, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 230, 239, 1) 100%
-  );
+  background: rgb(20, 12, 18);
+
+  background-color: rgb(238, 238, 238);
   min-height: 100vh;
   color: black;
+
+  box-sizing: border-box;
   background-repeat: no-repeat;
 }
-
-/* HEADER  */
-.header {
-  background-color: transparent;
-  position: relative;
-  height: auto;
-  padding-top: 15px;
-
+.logoContainer {
+  position: fixed;
+  z-index: 999;
   display: flex;
+  width: 100vw;
   top: 0;
-  width: 100vw;
-  box-sizing: border-box;
-  padding-right: 10vw;
-  padding-left: 10vw;
-  align-items: center;
-}
-
-.headerContent {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-
-  box-sizing: border-box;
-  padding: 1rem;
-  align-items: center;
-}
-/* Add a class to the child elements where you want to add space */
-.header-item {
-  margin-right: 1rem; /* Adjust the margin as per your desired spacing */
-}
-
-.mainLogoStyle {
-  width: 2rem;
-
-  height: fit-content;
-  transition: transform 0.2s ease;
-}
-.mainLogoStyle:hover {
-  transform: scale(1.3);
-}
-
-/* END HEADER  */
-.mainHome {
-  width: 100vw;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  left: 0;
+  height: 100vh;
   justify-content: center;
-  padding-bottom: 100px;
+  align-items: center;
 }
+.page {
+  background-color: none;
 
-.statementText:hover {
-  transform: scale(1.05);
-}
-.statementText {
-  transition: transform 0.4s ease;
-  color: black;
-
-  font-weight: 600;
-}
-
-/* Default styling for screens larger than 767px */
-.pillarsContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.pillarCard {
-  background-color: white;
-  flex: 0.5;
-  padding: 10px;
-  border-radius: 10px;
-  color: black;
-  transition: transform 0.3s;
-}
-/* Default styling for screens larger than 767px */
-.pillarsContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* background-color: blue; */
 }
 
-.pillarCard {
-  background-color: white;
-  flex: 0.5;
-  padding: 10px;
-  border-radius: 10px;
-  color: black;
-  transition: transform 0.3s;
-}
-
-/* Apply mobile-specific styles for screens up to 767px */
-@media (max-width: 767px) {
-  .pillarsContainer {
-    overflow-x: auto; /* Allow horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enable snapping to each card */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    width: 100%; /* Ensure the container takes the full width */
-  }
-
-  .pillarCard {
-    padding: 10px;
-    min-width: 80%;
-    border-radius: 10px;
-
-    color: black;
-  }
-
-  /* Hide the scrollbar */
-  .pillarsContainer::-webkit-scrollbar {
-    display: contents;
-  }
-}
-
-.home {
-  border-radius: 40px;
+.statement {
   box-sizing: border-box;
-  background-color: white;
+  flex: 1;
 
-  height: auto;
-  padding-bottom: 50px;
-  align-self: center;
+  /* background-color: pink; */
 }
 
 @media (min-width: 768px) {
-  .header {
-    background-color: transparent;
-    padding-top: 15px;
-    display: flex;
-    top: 0;
-    width: 100vw;
-    box-sizing: border-box;
-    padding-right: 10vw;
-    padding-left: 10vw;
-    align-items: center;
+  .statement {
+    font-size: 2rem;
   }
-
-  .statementText {
-    font-size: 4em;
-    width: 95%;
-    margin-top: 0px;
-    box-sizing: border-box;
-  }
-  .home {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    width: 80vw;
-    box-sizing: border-box;
-  }
-  .thinText {
-    font-weight: 100;
-    font-size: small;
-    color: black;
-    text-align: right;
+  .page {
+    padding: 50px;
+    width: 40vw;
+    padding-left: 100px;
   }
 }
-.navigationLinks {
-  gap: 30px;
-  display: flex;
-  font-size: large;
-}
-.linkText {
-  text-decoration: none;
-  color: white;
-  font-weight: 200;
-  transition: transform 0.3s ease, font-weight 0.1s ease-in-out;
-}
-.linkTextActive {
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  transition: transform 0.3s ease, font-weight 0.1s ease-in-out;
-}
-.linkText:hover {
-  transform: scale(1.2);
-}
-.linkTextActive:hover {
-  transform: scale(1.2);
-}
-
-/* MOBILE   */
 @media (max-width: 767px) {
-  .header {
-    background-color: transparent;
-
-    padding-top: 15px;
-
-    display: flex;
-    top: 0;
+  .statement {
+    font-size: 2rem;
+  }
+  .page {
+    padding: 20px;
+    padding-top: 50px;
     width: 100vw;
-    box-sizing: border-box;
-    padding-right: 10vw;
-    padding-left: 10vw;
-    align-items: center;
-  }
-  .thinText {
-    font-weight: 200;
-    font-size: small;
-    color: black;
-    text-align: right;
-  }
-
-  .statementText {
-    font-size: 4rem;
-    margin-top: 0px;
-  }
-  .home {
-    width: 100vw;
-    box-sizing: border-box;
-    padding-right: 5vw;
-    padding-left: 5vw;
   }
 }
 
-.nav {
-  flex-direction: row;
+/* HEADER  */
+.headerMain {
+  /* background-color: red; */
+  position: fixed;
   display: flex;
-  gap: 10px;
-
-  width: 80%;
+  padding: 20px;
 }
-
-/* COMPONENTS ========= */
-.buttonStyle {
-  height: 50px;
-  width: auto;
-  float: left;
-  transition: transform 0.2s ease;
-  margin-top: 10px;
-}
-.buttonStyle:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.infoBar {
-  width: 100%;
-  box-sizing: border-box;
+.logo {
+  width: 40px;
   height: auto;
-  transition: transform 0.2s ease;
-}
-.infoBar:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.socialButtonCont {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-.socialButton {
-  width: 60px;
-  height: auto;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-.socialButton:hover {
-  transform: scale(1.2);
 }

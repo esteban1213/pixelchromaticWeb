@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import Header from "./header";
+
 export const metadata: Metadata = {
   title: "Pixelchromatic",
   description: "Boost Your Success",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <Header /> */}
+        {children}
+      </body>
     </html>
   );
 }
