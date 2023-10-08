@@ -54,7 +54,7 @@ export default function Home() {
       <div className={styles.visionCards}>
         <div className={styles.visionCont}>
           <Image src={heart} alt={"bulb"} className={styles.icons} />
-          <p className={styles.cardTitle}>What we belive in.</p>
+          <p className={styles.cardTitle}>What we believe in.</p>
           <p className={styles.cardDescription}>
             At Pixelchromatic, we believe in the transformative power of
             intuitive technology and digital tools that drive success. We are
