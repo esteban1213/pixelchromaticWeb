@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: rgb(20, 12, 18);
-
-  background-color: #8ec5fc;
-  background-image: linear-gradient(45deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-color: white;
   align-items: flex-start;
   min-height: 100vh;
   color: black;
@@ -28,12 +25,16 @@
 .headerCont {
   display: flex;
   flex-direction: row;
+  color: black;
   justify-content: center;
   align-items: center;
 
-  border-radius: 30px;
-  width: 100%;
+  border-radius: 100px;
+  width: min-content;
   gap: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
 
   /* background-color: blue; */
 }
@@ -41,12 +42,14 @@
   color: black;
   border-radius: 30px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   flex-direction: row;
   justify-content: flex-start;
   flex: 9;
   padding: 10px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .searchCont {
@@ -73,79 +76,90 @@
 }
 
 .statement {
-  color: white;
-
-  font-weight: 500;
+  color: rgb(48, 48, 48);
+  font-weight: bold;
   text-align: left;
-
   margin-bottom: 20px;
-
   border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
   padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.statementText {
+  box-sizing: border-box;
 }
 
 /* Large Desktops */
 @media (min-width: 1200px) {
-  .page {
-    padding-top: 30px;
-    width: 60vw;
-    margin-left: 20vw;
-  }
   .statementText {
-    width: 100%;
-    font-size: 5rem;
+    width: 70vw;
+    margin-left: 15vw;
+    font-size: 6rem;
+  }
+  .visionCont {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .headerCont {
+    margin-left: 15vw;
   }
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .page {
-    padding-top: 30px;
-    width: 70vw;
-    margin-left: 15vw;
-  }
   .statementText {
-    width: 100%;
-    font-size: 4.5rem;
+    width: 75vw;
+    margin-left: 12.5vw;
+    font-size: 5rem;
+  }
+  .visionCont {
+    padding-left: 12.5vw;
+  }
+  .headerCont {
+    margin-left: 12.5vw;
   }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .page {
-    padding-top: 30px;
+  .statementText {
     width: 80vw;
     margin-left: 10vw;
+    font-size: 5rem;
   }
-  .statementText {
-    width: 100%;
-    font-size: 4rem;
+  .headerCont {
+    margin-left: 10vw;
   }
 }
 
 /* Tablets (portrait) and large mobile devices */
 @media (min-width: 576px) and (max-width: 767px) {
-  .page {
-    padding-top: 20px;
+  .statementText {
     width: 90vw;
     margin-left: 5vw;
+    font-size: 4rem;
   }
-  .statementText {
-    width: 100%;
-    font-size: 3.5rem;
+  .headerCont {
+    margin-left: 5vw;
   }
 }
 
 /* Small mobile devices */
 @media (max-width: 575px) {
-  .page {
-    padding: 10px;
-    padding-top: 10px;
-    width: 100vw;
-  }
   .statementText {
-    width: 100%;
+    width: 100vw;
     font-size: 3rem;
+    padding-left: 10px;
+  }
+  .headerCont {
+    margin-left: 3vw;
+  }
+  .logo {
+    transform: scale(0.7);
   }
 }
 
@@ -154,49 +168,28 @@
   /* background-color: red; */
   position: fixed;
   display: flex;
-  padding: 20px;
 }
 .logo {
-  width: 70px;
+  width: 80px;
   height: auto;
 }
-
 /* CARDS UNDER STATEMENT  */
-
-@media (min-width: 768px) {
-  .visionCards {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    background-color: white;
-    border-radius: 30px;
-    padding: 20px;
-  }
-  .cardTitle {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .visionCont p {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 767px) {
-  .visionCards {
-    display: flex;
-    flex-direction: column;
-  }
-  .cardTitle {
-    font-weight: bold;
-    font-size: x-large;
-  }
+.icons {
+  height: 50px;
+  width: auto;
 }
 .visionCont {
-  background-color: white;
-  border-radius: 30px;
-  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
-
-.icons {
-  height: 40px;
-  width: auto;
+.cardTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.cardDescription {
+  font-size: 2rem;
+}
+.visionContOne {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
