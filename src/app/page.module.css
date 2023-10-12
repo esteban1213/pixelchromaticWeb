@@ -1,195 +1,145 @@
+/* GLOBAL STYLES */
+
 .main {
   display: flex;
   flex-direction: column;
   width: 100vw;
   background-color: white;
-  align-items: flex-start;
   min-height: 100vh;
-  color: black;
-
   box-sizing: border-box;
+  background: rgb(232, 232, 232);
+  background: -moz-linear-gradient(
+    177deg,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(249, 249, 249, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    177deg,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(249, 249, 249, 1) 100%
+  );
+  background: linear-gradient(
+    177deg,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(249, 249, 249, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#f9f9f9",GradientType=1);
   background-repeat: no-repeat;
 }
-
-.logoContainer {
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-.headerCont {
+.headerContainer {
+  padding-top: 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
-  color: black;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 100px;
-  width: min-content;
-  gap: 10px;
-  box-sizing: border-box;
-  margin-top: 20px;
-  transition: transform 0.3s ease;
-
-  /* background-color: blue; */
-}
-.headerLogo {
-  color: black;
-  border-radius: 30px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex: 9;
-  padding: 10px;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
-
-.searchCont {
-  background-color: white;
-  flex: 1;
-  padding: 25px;
-  color: black;
-  border-radius: 30px;
-  display: flex;
   gap: 20px;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
-.searchIcon {
-  width: 1;
+.headerContainer p {
+  font-weight: 150;
+  font-size: large;
 }
-.page {
-  box-sizing: border-box;
+.logo {
+  width: 50px;
+  height: fit-content;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.sectionContainer {
+  display: flex;
+}
+.statements {
+  height: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: transform 0.25s ease;
+  cursor: crosshair;
+}
+.footer {
+  background-color: black;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-
-  /* background-color: green; */
+  gap: 5px;
+  align-items: center;
+  padding: 60px;
+  box-sizing: border-box;
 }
-
-.statement {
-  color: rgb(48, 48, 48);
+.footer .logo {
+  width: 60px;
+  height: fit-content;
+}
+.footerTitle {
   font-weight: bold;
-  text-align: left;
-  margin-bottom: 20px;
-  border-radius: 30px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
+  color: white;
 }
-.statementText {
-  box-sizing: border-box;
+.footerStatement {
+  font-weight: 100;
+  color: white;
+  font-size: large;
 }
 
 /* Large Desktops */
 @media (min-width: 1200px) {
-  .statementText {
-    width: 70vw;
-    margin-left: 15vw;
-    font-size: 6rem;
+  .main {
+    padding-left: 20vw;
+    padding-right: 20vw;
   }
-  .visionCont {
-    padding-left: 15vw;
-    padding-right: 15vw;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .headerCont {
-    margin-left: 15vw;
+  .statements {
+    width: 30vw;
   }
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .statementText {
-    width: 75vw;
-    margin-left: 12.5vw;
-    font-size: 5rem;
+  .main {
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
-  .visionCont {
-    padding-left: 12.5vw;
-  }
-  .headerCont {
-    margin-left: 12.5vw;
+  .statements {
+    width: 35vw;
   }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .statementText {
-    width: 80vw;
-    margin-left: 10vw;
-    font-size: 5rem;
+  .main {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
-  .headerCont {
-    margin-left: 10vw;
+  .statements {
+    width: 40vw;
   }
 }
 
 /* Tablets (portrait) and large mobile devices */
 @media (min-width: 576px) and (max-width: 767px) {
-  .statementText {
-    width: 90vw;
-    margin-left: 5vw;
-    font-size: 4rem;
+  .main {
+    padding-left: 05vw;
+    padding-right: 05vw;
   }
-  .headerCont {
-    margin-left: 5vw;
+  .statements {
+    width: 45vw;
   }
 }
 
 /* Small mobile devices */
 @media (max-width: 575px) {
-  .statementText {
-    width: 100vw;
-    font-size: 3rem;
-    padding-left: 10px;
+  .main {
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
-  .headerCont {
-    margin-left: 3vw;
-  }
-  .logo {
-    transform: scale(0.7);
+  .statements {
+    width: 50vw;
   }
 }
 
-/* HEADER  */
-.headerMain {
-  /* background-color: red; */
-  position: fixed;
-  display: flex;
-}
-.logo {
-  width: 80px;
-  height: auto;
-}
-/* CARDS UNDER STATEMENT  */
-.icons {
-  height: 50px;
-  width: auto;
-}
-.visionCont {
-  width: 100%;
-  box-sizing: border-box;
-}
-.cardTitle {
-  font-size: 3rem;
-  font-weight: bold;
-}
-.cardDescription {
-  font-size: 2rem;
-}
-.visionContOne {
-  background-color: rgb(255, 255, 255);
-  color: black;
+/* MOUSE HOVER ANIMATIONS */
+@media (min-width: 767px) {
+  .statements:hover {
+    transform: scale(1.1);
+  }
+  .logo:hover {
+    transform: scale(1.1);
+  }
 }
