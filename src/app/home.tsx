@@ -33,10 +33,15 @@ export default function Home() {
         <Image className={styles.logo} src={xLogo} alt="xLogo" />
         <p>Pixelchromatic</p>
       </div>
-      <div className={styles.sectionContainer}>
+      <div className={styles.sectionContainerMain}>
         <Image className={styles.statements} src={hanress} alt="statement" />
+        <div className={styles.quickLinksContainer}>
+          <div className={styles.quickLink}></div>
+          <div className={styles.quickLink}></div>
+          <div className={styles.quickLink}></div>
+        </div>
       </div>
-      <div className={styles.sectionContainer}>
+      <div className={styles.sectionContainerRight}>
         <Image className={styles.statements} src={vision} alt="statement" />
       </div>
       <div className={styles.sectionContainer}>
