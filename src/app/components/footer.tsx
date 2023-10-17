@@ -17,10 +17,6 @@ export default function footer() {
   return (
     <div className={styles.footer}>
       <Image src={xLogo} alt="xLogo" className={styles.logo} />
-      <p className={styles.footerTitle}>Pixelchromatic</p>
-      <p className={styles.footerStatement}>
-        Where your visions & ideas add all the color.
-      </p>
     </div>
   );
 }

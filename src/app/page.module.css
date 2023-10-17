@@ -7,22 +7,8 @@
   background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
-  background: rgb(232, 232, 232);
-  background: -moz-linear-gradient(
-    177deg,
-    rgba(232, 232, 232, 1) 0%,
-    rgba(249, 249, 249, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    177deg,
-    rgba(232, 232, 232, 1) 0%,
-    rgba(249, 249, 249, 1) 100%
-  );
-  background: linear-gradient(
-    177deg,
-    rgba(232, 232, 232, 1) 0%,
-    rgba(249, 249, 249, 1) 100%
-  );
+  background-color: black;
+  color: white;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#f9f9f9",GradientType=1);
   background-repeat: no-repeat;
 }
@@ -49,8 +35,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 100px;
-  gap: 20px;
+  margin-bottom: 30px;
+  gap: 10px;
 }
 .sectionContainer {
   display: flex;
@@ -107,6 +93,30 @@
   border-radius: 30px;
   transition: transform 0.2s ease;
 }
+.visionInfo {
+  padding: 40px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  overflow-wrap: break-word;
+  flex-direction: column;
+
+  transition: transform 0.2s ease;
+}
+.visionInfo p {
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.icon {
+  width: 30px;
+  height: min-content;
+}
+.visionInfo p {
+  color: rgb(42, 42, 42);
+  font-size: 1.8rem;
+}
 /* Large Desktops */
 @media (min-width: 1200px) {
   .main {
@@ -115,6 +125,11 @@
   }
   .statements {
     width: 30vw;
+  }
+
+  .sectionContainerRight {
+    flex-direction: row;
+    gap: 40px;
   }
 }
 
@@ -127,6 +142,11 @@
   .statements {
     width: 40vw;
   }
+
+  .sectionContainerRight {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
 /* Tablets (landscape) */
@@ -137,6 +157,12 @@
   }
   .statements {
     width: 50vw;
+  }
+
+  .sectionContainerRight {
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 40px;
   }
 }
 
@@ -149,6 +175,12 @@
   .statements {
     width: 60vw;
   }
+
+  .sectionContainerRight {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: end;
+  }
 }
 
 /* Small mobile devices */
@@ -160,6 +192,21 @@
   .statements {
     width: 70vw;
   }
+  .visionInfo p {
+    font-size: 1rem;
+  }
+  .visionInfo {
+    padding: 8vw;
+  }
+  .icon {
+    width: 30px;
+  }
+
+  .sectionContainerRight {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: end;
+  }
 }
 
 /* MOUSE HOVER ANIMATIONS */
@@ -168,6 +215,9 @@
     transform: scale(1.1);
   }
   .logo:hover {
+    transform: scale(1.1);
+  }
+  .visionInfo:hover {
     transform: scale(1.1);
   }
   .quickLink:hover {
