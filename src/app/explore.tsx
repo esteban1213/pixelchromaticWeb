@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import mainStyles from "./explore.module.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   BiSearchAlt,
   BiBulb,
@@ -19,18 +20,31 @@ import bulb from "../../public/icons/bulb.png";
 import rocket from "../../public/icons/rocket.png";
 
 // ANIMATION VARIANTS
-import { fadeUp, mainFadeVariant, swipeOut } from "./animations";
+import { fadeUp, mainFadeVariant, swipeOut, slideUp } from "./animations";
 
 export default function Home() {
+  const [isAnimationActive, setIsAnimationActive] = useState(false);
+  // Function to toggle the animation
+  const toggleAnimation = () => {
+    setIsAnimationActive(!isAnimationActive);
+  };
+
   const iconStyle = { height: "30px", width: "30px" };
   return (
     <motion.main
       initial="initial"
-      animate="animate"
+      animate={isAnimationActive ? "animate" : "initial"}
       exit="exit"
-      variants={mainFadeVariant}
+      variants={slideUp} // Use your defined animation variants here
       className={mainStyles.page}
-      transition={{ delay: 0, duration: 0.8 }}
-    ></motion.main>
+      transition={{ delay: 0, duration: 0.3, ease: "easeInOut" }}
+    >
+      {" "}
+      <div>
+        <p onClick={toggleAnimation} className={styles.button}>
+          {isAnimationActive ? "Close" : "Explore"}
+        </p>
+      </div>
+    </motion.main>
   );
 }

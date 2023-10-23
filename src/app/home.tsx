@@ -47,7 +47,7 @@ export default function Home() {
       </div>
       <div className={styles.sectionDiv}>
         <p className={styles.statement}>
-          A repository of intuitive software and ideas.
+          A newsletter of intuitive tools made with software.
         </p>
         <span className={styles.subStatement}>
           Life can be pretty tough sometimes, but you know what might make it a
