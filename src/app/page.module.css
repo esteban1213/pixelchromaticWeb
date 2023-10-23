@@ -7,7 +7,9 @@
   background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #ff0000;
+  background-image: linear-gradient(25deg, #ffc474 0%, #ff0000 100%);
+
   color: white;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#f9f9f9",GradientType=1);
   background-repeat: no-repeat;
@@ -17,12 +19,11 @@
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
 }
 .headerContainer p {
-  font-weight: 150;
-  font-size: large;
+  font-size: medium;
 }
 .logo {
   width: 50px;
@@ -31,31 +32,18 @@
   cursor: pointer;
 }
 
-.sectionContainerMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 30px;
-  gap: 10px;
-}
 .sectionContainer {
   display: flex;
   flex-direction: row;
   margin-bottom: 100px;
 }
-.sectionContainerRight {
+.sectionDiv {
   display: flex;
-  margin-bottom: 100px;
+  flex-direction: column;
+  justify-content: space-between; /* Use space-between instead of space-around */
+  align-items: center;
+}
 
-  justify-content: flex-end;
-}
-.statements {
-  height: fit-content;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  transition: transform 0.25s ease;
-  cursor: crosshair;
-}
 .footer {
   background-color: black;
   width: 100vw;
@@ -117,52 +105,48 @@
   color: rgb(42, 42, 42);
   font-size: 1.8rem;
 }
+.statement {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.subStatement {
+  text-align: center;
+  width: 80%;
+  font-weight: 300;
+  font-size: large;
+}
 /* Large Desktops */
 @media (min-width: 1200px) {
   .main {
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
-  .statements {
-    width: 30vw;
-  }
-
-  .sectionContainerRight {
-    flex-direction: row;
-    gap: 40px;
+  .statement {
+    font-size: 5rem;
   }
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
   .main {
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
-  .statements {
-    width: 40vw;
-  }
-
-  .sectionContainerRight {
-    flex-direction: row;
-    gap: 40px;
+  .statement {
+    font-size: 4rem;
   }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 768px) and (max-width: 991px) {
   .main {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
-  .statements {
-    width: 50vw;
-  }
-
-  .sectionContainerRight {
-    flex-direction: column-reverse;
-    align-items: end;
-    gap: 40px;
+  .statement {
+    font-size: 3rem;
   }
 }
 
@@ -176,10 +160,8 @@
     width: 60vw;
   }
 
-  .sectionContainerRight {
-    flex-direction: column-reverse;
-    gap: 40px;
-    align-items: end;
+  .statement {
+    font-size: 3rem;
   }
 }
 
@@ -189,9 +171,7 @@
     padding-left: 5vw;
     padding-right: 5vw;
   }
-  .statements {
-    width: 70vw;
-  }
+
   .visionInfo p {
     font-size: 1rem;
   }
@@ -202,19 +182,24 @@
     width: 30px;
   }
 
-  .sectionContainerRight {
-    flex-direction: column-reverse;
-    gap: 40px;
-    align-items: end;
+  .statement {
+    font-size: 3rem;
   }
+}
+
+/* GLOBAL COMPONENTS */
+.button {
+  background-color: #ff8777;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 /* MOUSE HOVER ANIMATIONS */
 @media (min-width: 767px) {
-  .statements:hover {
-    transform: scale(1.1);
-  }
-  .logo:hover {
+  .logo:hover,
+  .button:hover {
     transform: scale(1.1);
   }
   .visionInfo:hover {
