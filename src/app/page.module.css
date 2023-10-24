@@ -14,6 +14,13 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8",endColorstr="#f9f9f9",GradientType=1);
   background-repeat: no-repeat;
 }
+.mainContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .headerContainer {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -26,7 +33,7 @@
   font-size: medium;
 }
 .logo {
-  width: 50px;
+  width: 40px;
   height: fit-content;
   transition: transform 0.2s ease;
   cursor: pointer;
@@ -189,13 +196,19 @@
 
 /* GLOBAL COMPONENTS */
 .button {
-  background-color: #ff8777;
+  background-color: white;
   padding: 15px;
   border-radius: 10px;
   transition: transform 0.2s ease;
+  color: black;
   cursor: pointer;
 }
-
+.linkText {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 /* MOUSE HOVER ANIMATIONS */
 @media (min-width: 767px) {
   .logo:hover,
@@ -207,5 +220,8 @@
   }
   .quickLink:hover {
     transform: scale(1.05);
+  }
+  .linkText:hover {
+    transform: scale(1.2);
   }
 }

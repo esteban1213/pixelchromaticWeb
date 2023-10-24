@@ -33,30 +33,52 @@ export default function Home() {
       className={styles.page}
       transition={{ delay: 0, duration: 0.8 }}
     >
-      <div className={styles.headerContainer}>
-        <p style={{ flex: 1, display: "flex", justifyContent: "flex-start" }}>
-          Pixelchromatic
-        </p>
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          {" "}
-          <Image className={styles.logo} src={xLogo} alt="xLogo" />
+      <div className={styles.mainContainer}>
+        <div className={styles.headerContainer}>
+          <div style={{ flex: 1 }}></div>
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {" "}
+            <Image className={styles.logo} src={xLogo} alt="xLogo" />
+            <p
+              style={{
+                letterSpacing: 0.1,
+                fontSize: "1.2rem",
+                fontWeight: "200",
+              }}
+            >
+              PIXELCHROMATIC
+            </p>
+          </div>
+          <div
+            style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}
+          ></div>
         </div>
-        <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-          <p className={styles.button}>Subscribe</p>
+        <div className={styles.sectionDiv}>
+          <p className={styles.statement}>
+            A blog that tackles real problems with software.
+          </p>
+          <span className={styles.subStatement}>
+            Intuitive software makes life easier, if there is something holding
+            you back, there is a very good chance that software can boost your
+            success.
+          </span>
         </div>
+        <div className={styles.sectionDiv}>
+          <p className={styles.button}>Subscribe Now!</p>
+          <p className={styles.linkText}>Learn More</p>
+        </div>
+        <br />
+        <br />
       </div>
-      <div className={styles.sectionDiv}>
-        <p className={styles.statement}>
-          A newsletter of intuitive tools made with software.
-        </p>
-        <span className={styles.subStatement}>
-          Life can be pretty tough sometimes, but you know what might make it a
-          bit easier? Some nifty software that can handle a lot of these hectic
-          tasks.
-        </span>
-      </div>
-      <br />
-      <br />
+
       <Explore />
     </motion.main>
   );

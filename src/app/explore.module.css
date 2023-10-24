@@ -3,25 +3,76 @@
   width: 100vw;
   background-color: white;
   left: 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
   align-self: center;
   justify-self: center;
   transition: bottom 0.3s ease;
   display: flex;
   justify-content: center;
-
-  border-radius: 20px;
+  color: black;
   transition: box-shadow 0.2s ease, margin-bottom 0.2s ease;
 }
-@media (min-width: 767px) {
+.headings {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
+  justify-self: center;
+}
+/* Large Desktops */
+@media (min-width: 1200px) {
   .page {
-    margin-bottom: 20px;
+    margin-left: -15vw;
+  }
+  .headings {
+    width: 60%;
   }
 }
+
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page {
+    margin-left: -10vw;
+  }
+  .headings {
+    width: 80%;
+  }
+}
+
+/* Tablets (landscape) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .page {
+    margin-left: -6vw;
+  }
+  .headings {
+    width: 90%;
+  }
+}
+
+/* Tablets (portrait) and large mobile devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .page {
+    margin-left: -5vw;
+  }
+  .headings {
+    width: 90%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 575px) {
+  .page {
+    margin-left: -5vw;
+  }
+  .headings {
+    width: 95%;
+  }
+}
+
+/* HOVER ANIMATION */
+
 .page:hover {
   -webkit-box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
   box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
-  margin-bottom: 30px;
 }

@@ -31,20 +31,10 @@ export default function Home() {
 
   const iconStyle = { height: "30px", width: "30px" };
   return (
-    <motion.main
-      initial="initial"
-      animate={isAnimationActive ? "animate" : "initial"}
-      exit="exit"
-      variants={slideUp} // Use your defined animation variants here
-      className={mainStyles.page}
-      transition={{ delay: 0, duration: 0.3, ease: "easeInOut" }}
-    >
-      {" "}
-      <div>
-        <p onClick={toggleAnimation} className={styles.button}>
-          {isAnimationActive ? "Close" : "Explore Now!"}
-        </p>
-      </div>
-    </motion.main>
+    <main className={mainStyles.page}>
+      <p className={mainStyles.headings}>
+        We are harnessing the power of intuitive software
+      </p>
+    </main>
   );
 }
