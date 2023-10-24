@@ -42,7 +42,7 @@ export default function Home() {
       {" "}
       <div>
         <p onClick={toggleAnimation} className={styles.button}>
-          {isAnimationActive ? "Close" : "Explore"}
+          {isAnimationActive ? "Close" : "Explore Now!"}
         </p>
       </div>
     </motion.main>

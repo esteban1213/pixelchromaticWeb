@@ -31,6 +31,6 @@ export const fadeUp = {
 
 export const slideUp = {
   initial: { opacity: 1, y: "89%" }, // Initial state (hidden below the page)
-  animate: { opacity: 1, y: "0%" }, // Animation state (visible at the default position)
-  exit: { opacity: 1, y: "89%" }, // Exit state (hidden below the page again)
+  animate: { opacity: 1, y: "40%" }, // Animation state (visible at the default position)
+  exit: { opacity: 1, y: "40%" }, // Exit state (hidden below the page again)
 };
