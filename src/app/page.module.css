@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
 }
 .mainContainer {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

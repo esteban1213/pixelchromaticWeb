@@ -14,10 +14,6 @@ export const fadeUp = {
   animate: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5, // Duration of the animation
-      ease: "easeOut", // Easing function for fade-up effect
-    },
   },
   exit: {
     opacity: 0,
@@ -33,4 +29,14 @@ export const slideUp = {
   initial: { opacity: 1, y: "89%" }, // Initial state (hidden below the page)
   animate: { opacity: 1, y: "40%" }, // Animation state (visible at the default position)
   exit: { opacity: 1, y: "40%" }, // Exit state (hidden below the page again)
+};
+
+export const fadeInOut = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+};
+
+export const scaleIn = {
+  initial: { scale: 0.4 },
+  whileInView: { scale: 1 },
 };
