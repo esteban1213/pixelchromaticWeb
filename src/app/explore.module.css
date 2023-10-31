@@ -1,8 +1,9 @@
 .page {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   left: 0;
+  box-sizing: border-box;
   position: relative;
   bottom: 0;
   flex-direction: column;
@@ -22,8 +23,7 @@
 }
 .interactiveClickContainer {
   width: 85%;
-  flex: 1;
-  box-sizing: border-box;
+  height: 60%;
   background-color: rgb(44, 44, 44);
   top: 0;
   margin-top: -50px;
@@ -32,9 +32,6 @@
 }
 /* Large Desktops */
 @media (min-width: 1200px) {
-  .page {
-    margin-left: -15vw;
-  }
   .headings {
     width: 60%;
   }
@@ -42,9 +39,6 @@
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .page {
-    margin-left: -10vw;
-  }
   .headings {
     width: 80%;
   }
@@ -52,9 +46,6 @@
 
 /* Tablets (landscape) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .page {
-    margin-left: -6vw;
-  }
   .headings {
     width: 90%;
   }
@@ -62,9 +53,6 @@
 
 /* Tablets (portrait) and large mobile devices */
 @media (min-width: 576px) and (max-width: 767px) {
-  .page {
-    margin-left: -5vw;
-  }
   .headings {
     width: 90%;
   }
@@ -72,11 +60,9 @@
 
 /* Small mobile devices */
 @media (max-width: 575px) {
-  .page {
-    margin-left: -5vw;
-  }
   .headings {
     width: 95%;
+    font-size: 3rem;
   }
 }
 

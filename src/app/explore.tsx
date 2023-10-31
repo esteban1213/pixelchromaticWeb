@@ -46,14 +46,15 @@ export default function Home() {
     >
       <br />
       <p className={mainStyles.headings}>
-        Experience interactive & intuitive design!
+        Experience interactive & intuitive software with every read!
       </p>
       <br />
       <br />
 
       <motion.div
-        variants={scaleIn}
-        transition={{ duration: 0.5 }}
+        initial={{ scale: 0 }} // Initial scale is set to 0
+        whileInView={{ scale: 1 }} // Final scale is set to 1
+        transition={{ duration: 0.3 }} // Animation duration is 0.3 seconds
         className={mainStyles.interactiveClickContainer}
       >
         <p></p>

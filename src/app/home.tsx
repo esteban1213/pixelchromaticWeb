@@ -30,7 +30,7 @@ export default function Home() {
   const iconStyle = { height: "30px", width: "30px" };
 
   return (
-    <motion.main
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -89,7 +89,7 @@ export default function Home() {
           </span>
         </div>
         <div className={styles.sectionDiv}>
-          <p className={styles.button}>Subscribe Now!</p>
+          <motion.p className={styles.button}>Subscribe Now!</motion.p>
           <p className={styles.linkText}>Learn More</p>
         </div>
         <br />
@@ -97,6 +97,6 @@ export default function Home() {
       </div>
 
       <Explore />
-    </motion.main>
+    </motion.div>
   );
 }
