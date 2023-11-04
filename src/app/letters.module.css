@@ -21,7 +21,7 @@
   justify-self: flex-end;
   height: auto;
   padding-top: 30px;
-  width: 65%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,4 +31,54 @@
   box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
+}
+/* Large Desktops */
+@media (min-width: 1200px) {
+  .headings {
+    width: 60%;
+  }
+  .footer {
+    width: 65%;
+  }
+}
+
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .headings {
+    width: 80%;
+  }
+  .footer {
+    width: 70%;
+  }
+}
+
+/* Tablets (landscape) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .headings {
+    width: 90%;
+  }
+  .footer {
+    width: 75%;
+  }
+}
+
+/* Tablets (portrait) and large mobile devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .headings {
+    width: 90%;
+  }
+  .footer {
+    width: 85%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 575px) {
+  .headings {
+    width: 95%;
+    font-size: 3rem;
+  }
+  .footer {
+    width: 90%;
+  }
 }

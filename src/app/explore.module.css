@@ -16,7 +16,6 @@
   transition: box-shadow 0.2s ease, margin-bottom 0.2s ease;
 }
 .headings {
-  font-size: 3.4rem;
   text-align: center;
   font-weight: 300;
   justify-self: center;
@@ -37,6 +36,7 @@
 @media (min-width: 1200px) {
   .headings {
     width: 60%;
+    font-size: 3.4rem;
   }
 }
 
@@ -44,6 +44,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .headings {
     width: 80%;
+    font-size: 3.2rem;
   }
 }
 
@@ -51,6 +52,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .headings {
     width: 90%;
+    font-size: 3rem;
   }
 }
 
@@ -58,6 +60,7 @@
 @media (min-width: 576px) and (max-width: 767px) {
   .headings {
     width: 90%;
+    font-size: 2.5rem;
   }
 }
 
@@ -65,7 +68,7 @@
 @media (max-width: 575px) {
   .headings {
     width: 95%;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
