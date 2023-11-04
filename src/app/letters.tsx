@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import mainStyles from "./explore.module.css";
+import mainStyles from "./letters.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -29,7 +29,7 @@ import {
   scaleIn,
 } from "./animations";
 
-export default function Home() {
+export default function Letters() {
   const [isAnimationActive, setIsAnimationActive] = useState(false);
   // Function to toggle the animation
   const toggleAnimation = () => {
@@ -44,20 +44,16 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <br />
+      <p></p>
       <motion.div
-        initial={{ scale: 0.8 }} // Initial scale is set to 0
-        whileInView={{ scale: 1 }} // Final scale is set to 1
-        transition={{ duration: 0.3 }} // Animation duration is 0.3 seconds
-        className={mainStyles.interactiveClickContainer}
+        className={mainStyles.footer}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        <p></p>
+        <Image className={styles.logo} src={xLogo} alt="xLogo" />
+        <h3 style={{ fontWeight: 200 }}>2023</h3>
       </motion.div>
-      <p className={mainStyles.headings}>
-        Experience interactive & intuitive software with every read!
-      </p>
-      <br />
-      <br />
     </motion.main>
   );
 }

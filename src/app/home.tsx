@@ -19,6 +19,7 @@ import bulb from "../../public/icons/bulb.png";
 import rocket from "../../public/icons/rocket.png";
 // COMPONENTS / PAGES
 import Explore from "./explore";
+import Letters from "./letters";
 
 // ANIMATION VARIANTS
 import { fadeUp, mainFadeVariant, swipeOut } from "./animations";
@@ -49,16 +50,7 @@ export default function Home() {
             }}
           >
             {" "}
-            <motion.div
-              animate={{
-                rotate: [0, 360],
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-              }}
-            >
+            <motion.div variants={fadeUp} transition={{ delay: 0.8 }}>
               <Image className={styles.logo} src={xLogo} alt="xLogo" />
             </motion.div>
             <motion.p
@@ -79,24 +71,46 @@ export default function Home() {
           ></div>
         </div>
         <div className={styles.sectionDiv}>
-          <p className={styles.statement}>
-            A blog that tackles real problems with software.
-          </p>
-          <span className={styles.subStatement}>
+          <motion.p
+            className={styles.statement}
+            variants={fadeUp}
+            transition={{ delay: 0.7 }}
+          >
+            Making intuitive software solutions more accessible.
+          </motion.p>
+          <motion.p
+            variants={fadeUp}
+            transition={{ delay: 0.6 }}
+            className={styles.subStatement}
+          >
             Intuitive software makes life easier, if there is something holding
             you back, there is a very good chance that software can boost your
             success.
-          </span>
+          </motion.p>
         </div>
         <div className={styles.sectionDiv}>
-          <motion.p className={styles.button}>Subscribe Now!</motion.p>
-          <p className={styles.linkText}>Learn More</p>
+          <motion.p
+            variants={fadeUp}
+            transition={{ delay: 1 }}
+            className={styles.button}
+          >
+            Join Free!
+          </motion.p>
+          <motion.p
+            variants={fadeUp}
+            transition={{ delay: 1 }}
+            className={styles.linkText}
+          >
+            Learn More
+          </motion.p>
         </div>
         <br />
         <br />
       </div>
-
+      <br />
+      <br />
       <Explore />
+      <Letters />
     </motion.div>
   );
 }

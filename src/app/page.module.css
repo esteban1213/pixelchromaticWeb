@@ -7,8 +7,8 @@
   background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: #ff0000;
-  background-image: linear-gradient(25deg, #ffc474 0%, #ff0000 100%);
+  background-color: #ce00ff;
+  background-image: linear-gradient(25deg, #7b00ff 0%, #ce00ff 100%);
   overflow: hidden;
   color: white;
   padding: 0px;
@@ -137,12 +137,20 @@
   .statement {
     font-size: 5rem;
   }
+  .mainContainer {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
   .statement {
     font-size: 4rem;
+  }
+  .mainContainer {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -151,6 +159,10 @@
   .statement {
     font-size: 3rem;
   }
+  .mainContainer {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }
 
 /* Tablets (portrait) and large mobile devices */
@@ -158,7 +170,10 @@
   .statements {
     width: 60vw;
   }
-
+  .mainContainer {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
   .statement {
     font-size: 3rem;
   }
@@ -180,13 +195,17 @@
     margin-top: 0px;
     font-size: 2.3rem;
   }
+  .mainContainer {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
 }
 
 /* GLOBAL COMPONENTS */
 .button {
   background-color: white;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: transform 0.2s ease;
   color: black;
   cursor: pointer;
