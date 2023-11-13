@@ -18,6 +18,7 @@ import vision from "../../public/icons/vision.png";
 import boost from "../../public/icons/boost.png";
 import bulb from "../../public/icons/bulb.png";
 import rocket from "../../public/icons/rocket.png";
+import card from "../../public/icons/card.png";
 
 // ANIMATION VARIANTS
 import {
@@ -45,17 +46,10 @@ export default function Home() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <br />
-      <motion.div
-        initial={{ scale: 0.8 }} // Initial scale is set to 0
-        whileInView={{ scale: 1 }} // Final scale is set to 1
-        transition={{ duration: 0.3 }} // Animation duration is 0.3 seconds
-        className={mainStyles.interactiveClickContainer}
-      >
-        <p></p>
-      </motion.div>
-      <p className={mainStyles.headings}>
-        Experience interactive & intuitive software with every read!
-      </p>
+
+      <motion.p variants={fadeUp} className={mainStyles.headings}>
+        Read the latest!
+      </motion.p>
       <br />
       <br />
     </motion.main>

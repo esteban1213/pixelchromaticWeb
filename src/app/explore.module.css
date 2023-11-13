@@ -19,24 +19,39 @@
   text-align: center;
   font-weight: 300;
   justify-self: center;
+  margin-bottom: 20px;
+}
+.letterBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .interactiveClickContainer {
-  width: 85%;
-  height: 60%;
-  background-color: white;
   top: 0;
-  margin-top: -100px;
+
   align-self: center;
-  border-radius: 20px;
-  box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
-  -webkit-box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
-  -moz-box-shadow: 10px 10px 99px 2px rgba(0, 0, 0, 0.41);
+  width: 100vw;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  padding: 0%;
+}
+.card {
+  height: auto;
 }
 /* Large Desktops */
 @media (min-width: 1200px) {
   .headings {
     width: 60%;
     font-size: 3.4rem;
+  }
+  .card {
+    width: 80%;
+  }
+  .interactiveClickContainer {
+    margin-top: -200px;
   }
 }
 
@@ -46,6 +61,12 @@
     width: 80%;
     font-size: 3.2rem;
   }
+  .card {
+    width: 85%;
+  }
+  .interactiveClickContainer {
+    margin-top: -150px;
+  }
 }
 
 /* Tablets (landscape) */
@@ -53,6 +74,12 @@
   .headings {
     width: 90%;
     font-size: 3rem;
+  }
+  .card {
+    width: 86%;
+  }
+  .interactiveClickContainer {
+    margin-top: -100px;
   }
 }
 
@@ -62,6 +89,12 @@
     width: 90%;
     font-size: 2.5rem;
   }
+  .card {
+    width: 90%;
+  }
+  .interactiveClickContainer {
+    margin-top: -75px;
+  }
 }
 
 /* Small mobile devices */
@@ -70,12 +103,12 @@
     width: 95%;
     font-size: 2rem;
   }
+  .card {
+    width: 100%;
+  }
+  .interactiveClickContainer {
+    margin-top: -75px;
+  }
 }
 
 /* HOVER ANIMATION */
-
-.page:hover {
-  -webkit-box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
-  -moz-box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
-  box-shadow: 10px 10px 197px 30px rgba(0, 0, 0, 0.41);
-}

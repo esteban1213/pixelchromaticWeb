@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+
 import { motion } from "framer-motion";
-import { Yanone_Kaffeesatz } from "next/font/google";
+import { Yanone_Kaffeesatz, Comfortaa } from "next/font/google";
 import {
   BiSearchAlt,
   BiBulb,
@@ -26,6 +27,18 @@ import { fadeUp, mainFadeVariant, swipeOut } from "./animations";
 
 // FONTS
 const logoFont = Yanone_Kaffeesatz({ subsets: ["latin"] });
+const mainFont = Comfortaa({ subsets: ["latin"] });
+
+const arrowVariants = {
+  animate: {
+    y: [0, 10, 0, 10, 0], // Bouncing effect along the y-axis
+    transition: {
+      repeat: 1, // Repeat the animation indefinitely
+      duration: 1, // Total duration of one animation loop
+      ease: "easeInOut", // You can adjust the easing function
+    },
+  },
+};
 
 export default function Home() {
   const iconStyle = { height: "30px", width: "30px" };
@@ -35,7 +48,7 @@ export default function Home() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className={styles.page}
+      className={`${styles.page} ${mainFont.className}`}
     >
       <div className={styles.mainContainer}>
         <div className={styles.headerContainer}>
@@ -76,7 +89,8 @@ export default function Home() {
             variants={fadeUp}
             transition={{ delay: 0.7 }}
           >
-            Making intuitive software solutions more accessible.
+            Intuitive software to crush your productivity, personal image, and
+            success.
           </motion.p>
           <motion.p
             variants={fadeUp}
@@ -96,13 +110,16 @@ export default function Home() {
           >
             Join Free!
           </motion.p>
-          <motion.p
-            variants={fadeUp}
-            transition={{ delay: 1 }}
-            className={styles.linkText}
-          >
-            Learn More
+          <motion.p variants={fadeUp} transition={{ delay: 1 }}>
+            Scroll to start exploring!
           </motion.p>
+          <motion.div
+            className="scroll-arrow"
+            variants={arrowVariants}
+            animate="animate"
+          >
+            ▼
+          </motion.div>
         </div>
         <br />
         <br />
@@ -111,6 +128,16 @@ export default function Home() {
       <br />
       <Explore />
       <Letters />
+      <motion.div
+        className={styles.footer}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <p style={{ fontWeight: 200, color: "black", textAlign: "center" }}>
+          © 2023 Pixelchromatic®. <br /> All rights reserved.
+        </p>
+      </motion.div>
     </motion.div>
   );
 }

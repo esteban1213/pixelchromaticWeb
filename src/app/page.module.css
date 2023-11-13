@@ -4,15 +4,33 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: white;
+
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: #ce00ff;
-  background-image: linear-gradient(25deg, #7b00ff 0%, #ce00ff 100%);
+  background: #4776e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8e54e9,
+    #4776e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8e54e9,
+    #4776e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* opacity: 0.4;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #820080 10vw
+    ),
+    repeating-linear-gradient(#73008a55, #730069); */
   overflow: hidden;
   color: white;
   padding: 0px;
   margin: 0px;
+
   background-repeat: no-repeat;
 }
 .page {
@@ -60,8 +78,9 @@
 }
 
 .footer {
-  background-color: black;
+  background-color: white;
   width: 100vw;
+
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -135,7 +154,7 @@
 /* Large Desktops */
 @media (min-width: 1200px) {
   .statement {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   .mainContainer {
     margin-left: 15vw;
@@ -146,7 +165,7 @@
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
   .statement {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .mainContainer {
     margin-left: 10vw;
@@ -157,7 +176,7 @@
 /* Tablets (landscape) */
 @media (min-width: 768px) and (max-width: 991px) {
   .statement {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .mainContainer {
     margin-left: 10vw;
@@ -175,7 +194,7 @@
     margin-right: 10vw;
   }
   .statement {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 

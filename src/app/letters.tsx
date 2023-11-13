@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import mainStyles from "./letters.module.css";
+import exploreStyles from "./explore.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -42,18 +43,49 @@ export default function Letters() {
       className={mainStyles.page}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <p></p>
-      <motion.div
+      <div className={exploreStyles.letterBox}>
+        <Image className={styles.logo} src={xLogo} alt="xLogo" />
+        <motion.p className={exploreStyles.headings}>
+          "Thank your for checking out the blog! We hope that you found some of
+          these tools valuable. Click the button below to subscribe!" <br />{" "}
+          <span
+            style={{
+              textAlign: "right",
+              fontSize: "1.5rem",
+              marginBottom: "0px",
+            }}
+          ></span>
+        </motion.p>
+        <br />
+        <motion.p
+          variants={fadeUp}
+          transition={{ delay: 1 }}
+          className={styles.button}
+        >
+          Subscribe
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          transition={{ delay: 1 }}
+          className={styles.linkText}
+        >
+          Back to top
+        </motion.p>
+      </div>
+
+      {/* <motion.div
         className={mainStyles.footer}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <Image className={styles.logo} src={xLogo} alt="xLogo" />
-        <h3 style={{ fontWeight: 200 }}>2023</h3>
-      </motion.div>
+        <h3 style={{ fontWeight: 200, color: "black" }}>
+          Intuitive, Simple, Powerful
+        </h3>
+      </motion.div> */}
     </motion.main>
   );
 }
