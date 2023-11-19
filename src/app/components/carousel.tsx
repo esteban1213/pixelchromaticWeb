@@ -5,7 +5,16 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import styles from "./styles.module.css";
 
-const Carousel = ({ items }) => {
+// Define a type for the items prop
+type CarouselProps = {
+  items: Array<{
+    title: string;
+    preview: string;
+    // Add any other properties if necessary
+  }>;
+};
+
+const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const controls = useAnimation();
 
   return (
