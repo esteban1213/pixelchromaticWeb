@@ -224,7 +224,7 @@
 .button {
   background-color: white;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 30px;
   transition: transform 0.2s ease;
   color: black;
   cursor: pointer;
@@ -236,8 +236,7 @@
   transition: transform 0.2s ease;
 }
 /* MOUSE HOVER ANIMATIONS */
-@media (min-width: 767px) {
-  .logo:hover,
+@media (min-width: 768px) {
   .visionInfo:hover {
     transform: scale(1.1);
   }

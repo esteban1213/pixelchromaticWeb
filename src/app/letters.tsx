@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import mainStyles from "./letters.module.css";
 import exploreStyles from "./explore.module.css";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import { useState } from "react";
 import {
   BiSearchAlt,
@@ -61,8 +61,9 @@ export default function Letters() {
         <br />
         <motion.p
           variants={fadeUp}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0 }}
           className={styles.button}
+          whileHover={{ scale: 1.2 }}
         >
           Subscribe
         </motion.p>

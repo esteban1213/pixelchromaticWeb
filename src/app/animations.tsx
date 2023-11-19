@@ -19,7 +19,7 @@ export const fadeUp = {
     opacity: 0,
     y: -20,
     transition: {
-      duration: 0.5,
+      duration: 0.01,
       ease: "easeIn", // Easing function for exit animation
     },
   },

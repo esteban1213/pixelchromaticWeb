@@ -19,3 +19,126 @@
   background-color: black;
   border-radius: 10px;
 }
+
+/* BLOG CARDS */
+.blogCardContainer {
+  display: flex;
+  gap: 15px;
+  scroll-padding-left: 20px;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 30px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory; /* Optional: Add snapping effect */
+}
+.blogCardContainer::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: make scrollbar invisible */
+}
+
+.blogPostCard {
+  background-color: white;
+  border: solid rgb(91, 54, 255) 2px;
+  padding: 30px;
+  display: flex;
+  box-sizing: border-box;
+  height: auto;
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 30px;
+  justify-content: space-between;
+  scroll-snap-align: start; /* Optional: Add snapping effect */
+  transition: transform 0.2s ease-in-out;
+}
+
+.blogPostCard h1 {
+  font-weight: bolder;
+}
+
+.blogPostCard .separator {
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgb(91, 54, 255);
+}
+
+.readButton {
+  background-color: rgb(91, 54, 255);
+  padding: 20px;
+  color: white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Large Desktops */
+@media (min-width: 1200px) {
+  .blogPostCard {
+    flex: 0 0 auto;
+    width: 28vw;
+  }
+  .blogPostCard h1 {
+    font-size: 2rem;
+  }
+  .blogPostCard:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blogPostCard {
+    flex: 0 0 auto;
+    width: 30vw;
+  }
+  .blogPostCard h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablets (landscape) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .blogPostCard {
+    flex: 0 0 auto;
+    width: 40vw;
+  }
+  .blogPostCard h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablets (portrait) and large mobile devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .blogPostCard {
+    flex: 0 0 auto;
+    width: 70vw;
+  }
+  .blogPostCard h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 575px) {
+  .blogPostCard {
+    flex: 0 0 auto;
+    width: 90vw;
+  }
+  .blogPostCard h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* MOUSE HOVER ANIMATIONS */
+@media (min-width: 767px) {
+  .readButton:hover {
+    transform: scale(1.2);
+  }
+}

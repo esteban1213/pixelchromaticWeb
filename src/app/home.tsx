@@ -105,8 +105,9 @@ export default function Home() {
         <div className={styles.sectionDiv}>
           <motion.p
             variants={fadeUp}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0 }}
             className={styles.button}
+            whileHover={{ scale: 1.2 }}
           >
             Join Free!
           </motion.p>

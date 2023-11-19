@@ -9,6 +9,8 @@ import Logo from "../../public/images/logo.png";
 // ANIMATION VARIANTS
 import { mainFadeVariant, swipeOut, fadeUp } from "./animations";
 
+
+
 export default function Header() {
   return (
     <main className={styles.headerMain}>
